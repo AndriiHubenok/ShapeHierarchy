@@ -9,12 +9,11 @@ public class Quad extends Shape {
     private double cornerBetweenDiagonals;
     private int perimeter;
     private double square;
-    private int[] sides = new int[4];
+    private int[] sides;
 
     public Quad(int[] sides) {
-        for(int i = 0; i < this.sides.length; i++) {
-            this.sides[i] = sides[i];
-        }
+        this.sides = new int[4];
+        System.arraycopy(sides, 0, this.sides, 0, 4);
     }
     @Override
     public String getName() {

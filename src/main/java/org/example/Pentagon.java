@@ -7,12 +7,11 @@ public class Pentagon extends Shape {
     private int apothem;
     private int perimeter;
     private double square;
-    private int[] sides = new int[5];
+    private int[] sides;
 
     public Pentagon(int[] sides) {
-        for(int i = 0; i < this.sides.length; i++) {
-            this.sides[i] = sides[i];
-        }
+        this.sides = new int[5];
+        System.arraycopy(sides, 0, this.sides, 0, 5);
     }
     @Override
     public String getName() {

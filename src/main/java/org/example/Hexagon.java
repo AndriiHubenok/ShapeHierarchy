@@ -7,12 +7,11 @@ public class Hexagon extends Shape {
     private int apothem;
     private int perimeter;
     private double square;
-    private int[] sides = new int[6];
+    private int[] sides;
 
     public Hexagon(int[] sides) {
-        for(int i = 0; i < this.sides.length; i++) {
-            this.sides[i] = sides[i];
-        }
+        this.sides = new int[6];
+        System.arraycopy(sides, 0, this.sides, 0, 6);
     }
     @Override
     public String getName() {

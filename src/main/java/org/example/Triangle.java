@@ -6,12 +6,11 @@ public class Triangle extends Shape {
     static final int NUM_OF_CORNERS = 3;
     private int perimeter;
     private double square;
-    private int[] sides = new int[3];
+    private int[] sides;
 
     public Triangle(int[] sides) {
-        for(int i = 0; i < this.sides.length; i++) {
-            this.sides[i] = sides[i];
-        }
+        this.sides = new int[3];
+        System.arraycopy(sides, 0, this.sides, 0, 3);
     }
     @Override
     public String getName() {
